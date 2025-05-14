@@ -11,3 +11,7 @@
 .primary {
   background-color: #0BE58A;
 }
+
+.bg-img {
+  background-image: url(./img/chef.png);
+}

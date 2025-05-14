@@ -1,4 +1,6 @@
 import React from 'react';
+import { IoIosSearch } from "react-icons/io";
+import { FaRegCircleUser } from "react-icons/fa6";
 
 const Nav = () => {
     return (
@@ -12,13 +14,16 @@ const Nav = () => {
                     <a>Search</a>
                 </div>
                 <div className='flex gap-2 items-center'>
-                <div className='des bg-[#150B2B0D] rounded-full p-2'>
-                    {/* icon */}
-                    <input type="text" placeholder='search' className=' text-base bg-[#150B2B0D]'/>
+                <div className='des bg-[#150B2B0D] rounded-full p-2 flex gap-2 items-center justify-start'>
+                    <div className='text-lg'>
+                        <IoIosSearch />
+                    </div>
+                    
+                    <input type="text" placeholder='search' className='bg-[#150B2B0D] text-base '/>
                 </div>
                 {/* user */}
-                <div className='primary rounded-full'>
-                    
+                <div className='primary rounded-full p-2 text-lg'>
+                    <FaRegCircleUser />
                 </div>
                 </div>
             </nav>
