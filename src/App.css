@@ -15,3 +15,7 @@
 .bg-img {
   background-image: url(./img/chef.png);
 }
+
+body {
+  font-family: "Lexend", sans-serif
+}
