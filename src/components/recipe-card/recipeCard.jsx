@@ -2,9 +2,9 @@ import React from 'react';
 import { IoTimeOutline } from "react-icons/io5";
 import { AiOutlineFire } from "react-icons/ai";
 
-const RecipeCard = ({card, handleWantCookBtn}) => {
+const RecipeCard = ({card, handleWantCookBtn, clicked}) => {
     
-    const { recipe_name, image, description, ingredients, preparing_time, calories} = card;
+    const {recipe_id, recipe_name, image, description, ingredients, preparing_time, calories} = card;
 
     return (
         <div className='border-2 border-[#2828281A] p-4 rounded-lg flex flex-col  gap-6'>
@@ -39,7 +39,7 @@ const RecipeCard = ({card, handleWantCookBtn}) => {
                         </div>
                     </div>
                     <div>
-                        <button onClick={() => handleWantCookBtn(card)} className='btn rounded-full md:px-4 md:pt-3 md:pb-2 p-2 text-sm md:text-xl font-semibold primary tittle mt-4'>Want to Cook</button>
+                        <button onClick={() => handleWantCookBtn(card)} disabled={clicked.includes(recipe_id)} className='btn rounded-full md:px-4 md:pt-3 md:pb-2 p-2 text-sm md:text-xl font-semibold primary tittle mt-4'>Want to Cook</button>
                     </div>
                 </div>
             </div>

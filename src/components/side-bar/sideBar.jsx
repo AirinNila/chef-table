@@ -11,7 +11,7 @@ const SideBar = ({ preparing }) => {
                     <div className='flex text-[#878787] text-base'>
                         
                         <div className='flex gap-4 w-1/2 justify-end pr-4'>
-                            <p className='pr-6 md:pr-16'>Name</p>
+                            <p className='pr-6 md:pr-10'>Name</p>
                             <p>Time</p>
                         </div>
                         <p className=''>Calories</p>

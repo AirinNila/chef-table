@@ -10,10 +10,14 @@ import SideBar from './components/side-bar/sideBar'
 
 function App() {
   const [preparing, setPreparing] = useState([])
-
+  const [clicked, setClicked] = useState([])
+ 
   const handleWantCookBtn = (value) => {
       const newPreparing = [...preparing, value]
       setPreparing(newPreparing)
+      setClicked([...clicked, value.recipe_id])
+      
+
   }
 
   return (
@@ -22,7 +26,7 @@ function App() {
     <Banner></Banner>
     <Recipe></Recipe>
     <div className='flex flex-col items-center md:items-start md:flex-row container mx-auto mt-4 gap-4'>
-      <RecipeCards handleWantCookBtn= {handleWantCookBtn}></RecipeCards>
+      <RecipeCards handleWantCookBtn= {handleWantCookBtn} clicked={clicked}></RecipeCards>
       <SideBar preparing= {preparing}></SideBar>
     </div>
     </>

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import RecipeCard from '../recipe-card/recipeCard';
 
-const RecipeCards = ({handleWantCookBtn}) => {
+const RecipeCards = ({handleWantCookBtn, clicked}) => {
+    console.log(clicked)
     const [cards, setCards] = useState([])
 
     useEffect( () => {
@@ -17,6 +18,7 @@ const RecipeCards = ({handleWantCookBtn}) => {
                 key={card.recipe_id}
                 card={card}
                 handleWantCookBtn={handleWantCookBtn}
+                clicked= {clicked}
                 ></RecipeCard>)
             }
         </div>
