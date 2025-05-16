@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import RecipeCard from '../recipe-card/recipeCard';
 
-const RecipeCards = () => {
+const RecipeCards = ({handleWantCookBtn}) => {
     const [cards, setCards] = useState([])
 
     useEffect( () => {
@@ -10,12 +10,13 @@ const RecipeCards = () => {
         .then(data => setCards(data))
     },[])
     return (
-        <section className='w-2/3'>
+        <section className='w-3/5'>
         <div className='flex flex-col md:flex-row gap-4 md:grid md:grid-cols-2 '>
             {
                 cards.map(card => <RecipeCard
                 key={card.recipe_id}
                 card={card}
+                handleWantCookBtn={handleWantCookBtn}
                 ></RecipeCard>)
             }
         </div>

@@ -2,9 +2,9 @@ import React from 'react';
 import { IoTimeOutline } from "react-icons/io5";
 import { AiOutlineFire } from "react-icons/ai";
 
-const RecipeCard = ({card}) => {
-     console.log(card.ingredients)
-    const {recipe_id, recipe_name, image, description, ingredients, preparing_time, calories} = card;
+const RecipeCard = ({card, handleWantCookBtn}) => {
+    
+    const { recipe_name, image, description, ingredients, preparing_time, calories} = card;
 
     return (
         <div className='border-2 border-[#2828281A] p-4 rounded-lg flex flex-col  gap-6'>
@@ -17,7 +17,7 @@ const RecipeCard = ({card}) => {
                     <p className='des text-base'>{description}</p>
                 </div>
                 <div className='pt-6 flex flex-col gap-4 border-t-2 pb-4'>
-                    <h3 className='text-xl font-semibold'>Ingredients {ingredients.lenght}</h3>
+                    <h3 className='text-xl font-semibold'>Ingredients {ingredients.length} </h3>
                     <ul className='list-disc text-[#878787] pl-6'>
                         
                         <li>{ingredients[0]}</li>
@@ -39,7 +39,7 @@ const RecipeCard = ({card}) => {
                         </div>
                     </div>
                     <div>
-                        <button className='btn rounded-full md:px-4 md:pt-3 md:pb-2 p-2 text-sm md:text-xl font-semibold primary tittle mt-4'>Want to Cook</button>
+                        <button onClick={() => handleWantCookBtn(card)} className='btn rounded-full md:px-4 md:pt-3 md:pb-2 p-2 text-sm md:text-xl font-semibold primary tittle mt-4'>Want to Cook</button>
                     </div>
                 </div>
             </div>
