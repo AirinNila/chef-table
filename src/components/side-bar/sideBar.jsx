@@ -2,7 +2,7 @@ import React from 'react';
 import Preparing from '../preparing/preparing';
 import CurrentlyCooks from '../currently-cooks/currentlyCooks';
 
-const SideBar = ({ preparing, handleCurrenCook , currentCook}) => {
+const SideBar = ({ preparing, handleCurrenCook , currentCook, time, calori}) => {
         //console.log(preparing)
     return (
         <section className='md:w-2/5 w-full p-4'>
@@ -24,7 +24,7 @@ const SideBar = ({ preparing, handleCurrenCook , currentCook}) => {
                     </div>
                 </div>
                 <div className='flex flex-col gap-4'>
-                    <p className='border-b-2 p-2 text-2xl text-[#282828] font-semibold text-center'>Currently cooking:</p>
+                    <p className='border-b-2 p-2 text-2xl text-[#282828] font-semibold text-center'>Currently cooking: {currentCook.length}</p>
                      <div className='flex text-[#878787] text-base'>
                             <p className='w-2/5 text-center'>Name</p>
                         <div className='flex gap-4 w-3/5 justify-start'>
@@ -37,6 +37,13 @@ const SideBar = ({ preparing, handleCurrenCook , currentCook}) => {
                             currentCook.map(data => <CurrentlyCooks key={data.recipe_id} data={data}></CurrentlyCooks>)
                         }
                     </div>
+                <div className='flex'>
+                    <div className='w-2/5'></div>
+                      <div className='flex w-3/5'>
+                   <p className='font-bold'> Total time = {time}</p>
+                   <p className='font-bold'>Total calories = {calori}</p>
+                </div>
+                </div>
                 </div>
             </div>
         </section>

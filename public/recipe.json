@@ -11,8 +11,8 @@
       "1 tbsp chili flakes",
       "200 g fresh basil leaves"
     ],
-    "preparing_time": "30 min",
-    "calories": "320 calories"
+    "preparing_time": "30",
+    "calories": "320"
   },
   {
     "recipe_id": 2,
@@ -26,8 +26,8 @@
       "200 ml heavy cream",
       "50 g parmesan cheese"
     ],
-    "preparing_time": "25 min",
-    "calories": "450 calories"
+    "preparing_time": "25",
+    "calories": "450"
   },
   {
     "recipe_id": 3,
@@ -41,8 +41,8 @@
       "1 tsp black pepper",
       "1 tsp dried thyme"
     ],
-    "preparing_time": "20 min",
-    "calories": "290 calories"
+    "preparing_time": "20",
+    "calories": "290"
   },
   {
     "recipe_id": 4,
@@ -56,8 +56,8 @@
       "6 taco shells",
       "150 g tomato salsa"
     ],
-    "preparing_time": "35 min",
-    "calories": "380 calories"
+    "preparing_time": "35",
+    "calories": "380"
   },
   {
     "recipe_id": 5,
@@ -71,8 +71,8 @@
       "2 eggs",
       "2 tbsp soy sauce"
     ],
-    "preparing_time": "20 min",
-    "calories": "300 calories"
+    "preparing_time": "20",
+    "calories": "300"
   },
   {
     "recipe_id": 6,
@@ -87,6 +87,6 @@
       "Fresh basil leaves"
     ],
     "preparing_time": "40 min",
-    "calories": "500 calories"
+    "calories": "500"
   }
 ]
