@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import RecipeCard from '../recipe-card/recipeCard';
 
 const RecipeCards = ({handleWantCookBtn, clicked}) => {
-    console.log(clicked)
+   // console.log(clicked)
     const [cards, setCards] = useState([])
 
     useEffect( () => {

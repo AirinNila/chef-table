@@ -11,14 +11,19 @@ import SideBar from './components/side-bar/sideBar'
 function App() {
   const [preparing, setPreparing] = useState([])
   const [clicked, setClicked] = useState([])
+  const [currentCook, setCurrentCook] = useState([])
  
   const handleWantCookBtn = (value) => {
       const newPreparing = [...preparing, value]
       setPreparing(newPreparing)
-      setClicked([...clicked, value.recipe_id])
-      
+      setClicked([...clicked, value.recipe_id]) 
+   }
 
-  }
+   const handleCurrenCook = (id, recipe) => {
+       console.log('removed', recipe)
+       const newCook = preparing.filter(data => data.recipe_id !== id )
+       setPreparing(newCook)
+   }
 
   return (
     <>
@@ -27,7 +32,7 @@ function App() {
     <Recipe></Recipe>
     <div className='flex flex-col items-center md:items-start md:flex-row container mx-auto mt-4 gap-4'>
       <RecipeCards handleWantCookBtn= {handleWantCookBtn} clicked={clicked}></RecipeCards>
-      <SideBar preparing= {preparing}></SideBar>
+      <SideBar preparing= {preparing} handleCurrenCook={handleCurrenCook}></SideBar>
     </div>
     </>
   )
