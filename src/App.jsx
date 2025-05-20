@@ -20,9 +20,11 @@ function App() {
    }
 
    const handleCurrenCook = (id, recipe) => {
-       console.log('removed', recipe)
+      // console.log('removed', recipe)
        const newCook = preparing.filter(data => data.recipe_id !== id )
        setPreparing(newCook)
+       const newCurrentCook = [...currentCook, recipe]
+       setCurrentCook(newCurrentCook)
    }
 
   return (
@@ -32,7 +34,7 @@ function App() {
     <Recipe></Recipe>
     <div className='flex flex-col items-center md:items-start md:flex-row container mx-auto mt-4 gap-4'>
       <RecipeCards handleWantCookBtn= {handleWantCookBtn} clicked={clicked}></RecipeCards>
-      <SideBar preparing= {preparing} handleCurrenCook={handleCurrenCook}></SideBar>
+      <SideBar preparing= {preparing} handleCurrenCook={handleCurrenCook} currentCook={currentCook}></SideBar>
     </div>
     </>
   )
